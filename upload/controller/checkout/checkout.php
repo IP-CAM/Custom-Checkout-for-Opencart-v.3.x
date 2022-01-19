@@ -55,7 +55,6 @@ class ControllerCheckoutCheckout extends Controller {
 		);
 
 		// Cart Table Start
-
         if ($this->cart->hasProducts() || !empty($this->session->data['vouchers'])) {
             if (!$this->cart->hasStock() && (!$this->config->get('config_stock_checkout') || $this->config->get('config_stock_warning'))) {
                 $data['error_warning'] = $this->language->get('error_stock');
